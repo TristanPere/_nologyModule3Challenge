@@ -40,12 +40,25 @@ console.log(getLargestNumber(0,0,0)); //Beyond Scope
 
 // 4. Write a function that takes an array of names and returns the last name from the array of names.
 
-const getLastName = (lastName) => {
-    return lastName[lastName.length-1]
+const getLastName = (lastNameArray) => {
+    return lastNameArray[lastNameArray.length-1]
 }
 
 console.log(getLastName(["Charlie", "Rob", "Andy"]));
 console.log(getLastName(["Ash","Stu"]));
 
 
+// 5. Write a function that takes an array of numbers and returns true if all of the numbers are positive.
+//    It should return false if there are one or more negative numbers in the array.
 
+const allNumbersPositive = (numberArray) => {
+    for (i=0; i<numberArray.length; i++){
+        if (numberArray[i]<0){
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(allNumbersPositive([2,4,5]));
+console.log(allNumbersPositive([-5,4,6]));
