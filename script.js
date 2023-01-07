@@ -30,12 +30,22 @@ const getLargestNumber = (numberOne, numberTwo, numberThree) => {
     } else if (numberThree>numberOne && numberThree>numberTwo) {
         return numberThree;
     } else {
-        return `Numbers are equal = ${numberOne}`;
+        return `Numbers are equal = ${numberOne}`; //Beyond Scope
     }
 }
 
 console.log(getLargestNumber(2, 1, 4));
 console.log(getLargestNumber(6,2,3));
-console.log(getLargestNumber(0,0,0));
+console.log(getLargestNumber(0,0,0)); //Beyond Scope
+
+// 4. Write a function that takes an array of names and returns the last name from the array of names.
+
+const getLastName = (lastName) => {
+    return lastName[lastName.length-1]
+}
+
+console.log(getLastName(["Charlie", "Rob", "Andy"]));
+console.log(getLastName(["Ash","Stu"]));
+
 
 
